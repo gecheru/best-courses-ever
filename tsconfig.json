@@ -46,5 +46,5 @@
     "moduleDetection": "force",
     "skipLibCheck": true
   },
-  "exclude": ["eslint.config.ts", "./node_modules"]
+  "exclude": ["eslint.config.ts", "./node_modules", "./dist"]
 }

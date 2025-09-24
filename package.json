@@ -6,15 +6,15 @@
   "main": "index.js",
   "scripts": {
     "dev": "node --watch --loader ts-node/esm --no-warnings=ExperimentalWarning ./src/index.ts",
-    "start": "node --loader ts-node/esm --no-warnings=ExperimentalWarning ./src/index.ts",
+    "build": "tsc",
+    "start": "node ./dist/index.js",
     "lint": "eslint .",
     "format:check": "prettier . --check"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^5.1.0",
-    "pug": "^3.0.3"
+    "express": "^5.1.0"
   },
   "devDependencies": {
     "@eslint/css": "^0.11.0",
@@ -23,6 +23,7 @@
     "@eslint/markdown": "^7.2.0",
     "@tsconfig/node-lts": "^22.0.2",
     "@tsconfig/node-ts": "^23.6.1",
+    "@types/express": "^5.0.3",
     "@types/node": "^24.5.2",
     "eslint": "^9.36.0",
     "globals": "^16.4.0",
