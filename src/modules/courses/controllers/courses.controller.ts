@@ -1,9 +1,12 @@
 import type { RequestHandler } from 'express'
-import { CoursesService } from './courses.service.ts'
-import type { ICoursesController } from './types/ICoursesController.ts'
+import { CoursesService } from '../courses.service.ts'
 
-export class CoursesController implements ICoursesController {
-  constructor(service = new CoursesService()) {}
+export class CoursesController {
+  private service: CoursesService
+
+  constructor(service = new CoursesService()) {
+    this.service = service
+  }
 
   createCourse: RequestHandler = (req, res) => {}
   updateCourse: RequestHandler = (req, res) => {}
